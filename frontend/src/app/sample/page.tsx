@@ -3,6 +3,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { Todo } from "../components/Todo";
+import { Text } from "../components/Text";
 
 type TodoType = {
   userId: number;
@@ -26,6 +27,7 @@ export default function Sample() {
     <>
       <div className="App">
         <h3>こんばんは</h3>
+        <Text color="red" fontSize="18px"/>
         <button onClick={onClickFetchData}>データ取得</button>
         {todos.map((todo) => (
           <Todo

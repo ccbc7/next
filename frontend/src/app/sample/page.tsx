@@ -4,6 +4,12 @@ import axios from "axios";
 import { useState } from "react";
 import { Todo } from "../components/Todo";
 import { Text } from "../components/Text";
+import { UserProfile } from "../components/UserProfile";
+
+const user = {
+  name: "じゃけえ",
+  hobbies: ["映画", "ゲーム"],
+};
 
 type TodoType = {
   userId: number;
@@ -26,8 +32,9 @@ export default function Sample() {
   return (
     <>
       <div className="App">
+        <UserProfile user={user} />
         <h3>こんばんは</h3>
-        <Text color="red" fontSize="18px"/>
+        <Text color="red" fontSize="18px" />
         <button onClick={onClickFetchData}>データ取得</button>
         {todos.map((todo) => (
           <Todo

@@ -1,0 +1,10 @@
+.container {
+  border: solid 1px #ccc;
+  border-radius: 4px;
+  padding: 0 16px;
+  margin: 8px;
+}
+
+.custom_hook p {
+  color: red;
+}
